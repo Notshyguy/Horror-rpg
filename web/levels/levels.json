@@ -1,0 +1,7342 @@
+[
+  {
+    "mechanic": "lights_out",
+    "size": 3,
+    "states": 2,
+    "optimal": 3,
+    "grid": [
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1
+      ]
+    ],
+    "id": 1,
+    "difficulty": "tutorial",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 3,
+    "states": 2,
+    "optimal": 3,
+    "grid": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "id": 2,
+    "difficulty": "tutorial",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 3,
+    "states": 2,
+    "optimal": 1,
+    "grid": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "id": 3,
+    "difficulty": "tutorial",
+    "moves": 3
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 3,
+    "states": 2,
+    "optimal": 1,
+    "grid": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "id": 4,
+    "difficulty": "tutorial",
+    "moves": 3
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 3,
+    "states": 2,
+    "optimal": 3,
+    "grid": [
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "id": 5,
+    "difficulty": "tutorial",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 3,
+    "states": 2,
+    "optimal": 1,
+    "grid": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "id": 6,
+    "difficulty": "tutorial",
+    "moves": 3
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 3,
+    "states": 2,
+    "optimal": 3,
+    "grid": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "id": 7,
+    "difficulty": "tutorial",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 3,
+    "states": 2,
+    "optimal": 3,
+    "grid": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1
+      ]
+    ],
+    "id": 8,
+    "difficulty": "tutorial",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 3,
+    "states": 2,
+    "optimal": 3,
+    "grid": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "id": 9,
+    "difficulty": "tutorial",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 3,
+    "states": 2,
+    "optimal": 3,
+    "grid": [
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ]
+    ],
+    "id": 10,
+    "difficulty": "tutorial",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1
+      ]
+    ],
+    "id": 11,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "id": 12,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "id": 13,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        1
+      ]
+    ],
+    "id": 14,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0
+      ]
+    ],
+    "id": 15,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "id": 16,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ]
+    ],
+    "id": 17,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "id": 18,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 6,
+    "grid": [
+      [
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        1
+      ]
+    ],
+    "id": 19,
+    "difficulty": "easy",
+    "moves": 12
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        1
+      ]
+    ],
+    "id": 20,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "id": 21,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ]
+    ],
+    "id": 22,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 6,
+    "grid": [
+      [
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        0
+      ]
+    ],
+    "id": 23,
+    "difficulty": "easy",
+    "moves": 12
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "id": 24,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "id": 25,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1
+      ]
+    ],
+    "id": 26,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 6,
+    "grid": [
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ]
+    ],
+    "id": 27,
+    "difficulty": "easy",
+    "moves": 12
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        1
+      ]
+    ],
+    "id": 28,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "id": 29,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ]
+    ],
+    "id": 30,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ]
+    ],
+    "id": 31,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1
+      ]
+    ],
+    "id": 32,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1
+      ]
+    ],
+    "id": 33,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "id": 34,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1
+      ]
+    ],
+    "id": 35,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ]
+    ],
+    "id": 36,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "id": 37,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ]
+    ],
+    "id": 38,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1
+      ]
+    ],
+    "id": 39,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 6,
+    "grid": [
+      [
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ]
+    ],
+    "id": 40,
+    "difficulty": "easy",
+    "moves": 12
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "id": 41,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ]
+    ],
+    "id": 42,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ]
+    ],
+    "id": 43,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1
+      ]
+    ],
+    "id": 44,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ]
+    ],
+    "id": 45,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        1
+      ]
+    ],
+    "id": 46,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        0
+      ]
+    ],
+    "id": 47,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ]
+    ],
+    "id": 48,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1
+      ]
+    ],
+    "id": 49,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 4,
+    "states": 2,
+    "optimal": 4,
+    "grid": [
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "id": 50,
+    "difficulty": "easy",
+    "moves": 8
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 6,
+    "grid": [
+      [
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0
+      ]
+    ],
+    "id": 51,
+    "difficulty": "medium",
+    "moves": 10
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 10,
+    "grid": [
+      [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "id": 52,
+    "difficulty": "medium",
+    "moves": 16
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 6,
+    "grid": [
+      [
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    ],
+    "id": 53,
+    "difficulty": "medium",
+    "moves": 10
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 6,
+    "grid": [
+      [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    ],
+    "id": 54,
+    "difficulty": "medium",
+    "moves": 10
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 6,
+    "grid": [
+      [
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    ],
+    "id": 55,
+    "difficulty": "medium",
+    "moves": 10
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 6,
+    "grid": [
+      [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    ],
+    "id": 56,
+    "difficulty": "medium",
+    "moves": 10
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 8,
+    "grid": [
+      [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    ],
+    "id": 57,
+    "difficulty": "medium",
+    "moves": 13
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 6,
+    "grid": [
+      [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        1
+      ]
+    ],
+    "id": 58,
+    "difficulty": "medium",
+    "moves": 10
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 6,
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "id": 59,
+    "difficulty": "medium",
+    "moves": 10
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 8,
+    "grid": [
+      [
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "id": 60,
+    "difficulty": "medium",
+    "moves": 13
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 8,
+    "grid": [
+      [
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        1
+      ]
+    ],
+    "id": 61,
+    "difficulty": "medium",
+    "moves": 13
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 6,
+    "grid": [
+      [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "id": 62,
+    "difficulty": "medium",
+    "moves": 10
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 8,
+    "grid": [
+      [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        1
+      ]
+    ],
+    "id": 63,
+    "difficulty": "medium",
+    "moves": 13
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 6,
+    "grid": [
+      [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    ],
+    "id": 64,
+    "difficulty": "medium",
+    "moves": 10
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 10,
+    "grid": [
+      [
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0
+      ]
+    ],
+    "id": 65,
+    "difficulty": "medium",
+    "moves": 16
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 6,
+    "grid": [
+      [
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    ],
+    "id": 66,
+    "difficulty": "medium",
+    "moves": 10
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 10,
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        0
+      ]
+    ],
+    "id": 67,
+    "difficulty": "medium",
+    "moves": 16
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 8,
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        1
+      ]
+    ],
+    "id": 68,
+    "difficulty": "medium",
+    "moves": 13
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 6,
+    "grid": [
+      [
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    ],
+    "id": 69,
+    "difficulty": "medium",
+    "moves": 10
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 8,
+    "grid": [
+      [
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    ],
+    "id": 70,
+    "difficulty": "medium",
+    "moves": 13
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 8,
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        1,
+        1
+      ]
+    ],
+    "id": 71,
+    "difficulty": "medium",
+    "moves": 13
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 8,
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        0
+      ]
+    ],
+    "id": 72,
+    "difficulty": "medium",
+    "moves": 13
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 6,
+    "grid": [
+      [
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    ],
+    "id": 73,
+    "difficulty": "medium",
+    "moves": 10
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 8,
+    "grid": [
+      [
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        1
+      ]
+    ],
+    "id": 74,
+    "difficulty": "medium",
+    "moves": 13
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 8,
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    ],
+    "id": 75,
+    "difficulty": "medium",
+    "moves": 13
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 10,
+    "grid": [
+      [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    ],
+    "id": 76,
+    "difficulty": "medium",
+    "moves": 16
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 6,
+    "grid": [
+      [
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    ],
+    "id": 77,
+    "difficulty": "medium",
+    "moves": 10
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 8,
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "id": 78,
+    "difficulty": "medium",
+    "moves": 13
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 6,
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    ],
+    "id": 79,
+    "difficulty": "medium",
+    "moves": 10
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 8,
+    "grid": [
+      [
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        1
+      ]
+    ],
+    "id": 80,
+    "difficulty": "medium",
+    "moves": 13
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 8,
+    "grid": [
+      [
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    ],
+    "id": 81,
+    "difficulty": "medium",
+    "moves": 13
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 6,
+    "grid": [
+      [
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "id": 82,
+    "difficulty": "medium",
+    "moves": 10
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 8,
+    "grid": [
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        1
+      ]
+    ],
+    "id": 83,
+    "difficulty": "medium",
+    "moves": 13
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 6,
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "id": 84,
+    "difficulty": "medium",
+    "moves": 10
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 8,
+    "grid": [
+      [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        1
+      ]
+    ],
+    "id": 85,
+    "difficulty": "medium",
+    "moves": 13
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 6,
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        1
+      ]
+    ],
+    "id": 86,
+    "difficulty": "medium",
+    "moves": 10
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 6,
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "id": 87,
+    "difficulty": "medium",
+    "moves": 10
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 8,
+    "grid": [
+      [
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    ],
+    "id": 88,
+    "difficulty": "medium",
+    "moves": 13
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 6,
+    "grid": [
+      [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    ],
+    "id": 89,
+    "difficulty": "medium",
+    "moves": 10
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 5,
+    "states": 2,
+    "optimal": 8,
+    "grid": [
+      [
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    ],
+    "id": 90,
+    "difficulty": "medium",
+    "moves": 13
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 12,
+    "grid": [
+      [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "id": 91,
+    "difficulty": "hard",
+    "moves": 17
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 16,
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    ],
+    "id": 92,
+    "difficulty": "hard",
+    "moves": 22
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 14,
+    "grid": [
+      [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ]
+    ],
+    "id": 93,
+    "difficulty": "hard",
+    "moves": 20
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 10,
+    "grid": [
+      [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ]
+    ],
+    "id": 94,
+    "difficulty": "hard",
+    "moves": 14
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 12,
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "id": 95,
+    "difficulty": "hard",
+    "moves": 17
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 10,
+    "grid": [
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ]
+    ],
+    "id": 96,
+    "difficulty": "hard",
+    "moves": 14
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 14,
+    "grid": [
+      [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ]
+    ],
+    "id": 97,
+    "difficulty": "hard",
+    "moves": 20
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 10,
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ]
+    ],
+    "id": 98,
+    "difficulty": "hard",
+    "moves": 14
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 12,
+    "grid": [
+      [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    ],
+    "id": 99,
+    "difficulty": "hard",
+    "moves": 17
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 8,
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ]
+    ],
+    "id": 100,
+    "difficulty": "hard",
+    "moves": 11
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 10,
+    "grid": [
+      [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    ],
+    "id": 101,
+    "difficulty": "hard",
+    "moves": 14
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 14,
+    "grid": [
+      [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ]
+    ],
+    "id": 102,
+    "difficulty": "hard",
+    "moves": 20
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 8,
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    ],
+    "id": 103,
+    "difficulty": "hard",
+    "moves": 11
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 12,
+    "grid": [
+      [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "id": 104,
+    "difficulty": "hard",
+    "moves": 17
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 12,
+    "grid": [
+      [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ]
+    ],
+    "id": 105,
+    "difficulty": "hard",
+    "moves": 17
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 8,
+    "grid": [
+      [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    ],
+    "id": 106,
+    "difficulty": "hard",
+    "moves": 11
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 10,
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ]
+    ],
+    "id": 107,
+    "difficulty": "hard",
+    "moves": 14
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 10,
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    ],
+    "id": 108,
+    "difficulty": "hard",
+    "moves": 14
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 12,
+    "grid": [
+      [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ]
+    ],
+    "id": 109,
+    "difficulty": "hard",
+    "moves": 17
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 12,
+    "grid": [
+      [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    ],
+    "id": 110,
+    "difficulty": "hard",
+    "moves": 17
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 12,
+    "grid": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    ],
+    "id": 111,
+    "difficulty": "hard",
+    "moves": 17
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 8,
+    "grid": [
+      [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ]
+    ],
+    "id": 112,
+    "difficulty": "hard",
+    "moves": 11
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 10,
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "id": 113,
+    "difficulty": "hard",
+    "moves": 14
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 12,
+    "grid": [
+      [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    ],
+    "id": 114,
+    "difficulty": "hard",
+    "moves": 17
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 14,
+    "grid": [
+      [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "id": 115,
+    "difficulty": "hard",
+    "moves": 20
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 12,
+    "grid": [
+      [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    ],
+    "id": 116,
+    "difficulty": "hard",
+    "moves": 17
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 16,
+    "grid": [
+      [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    ],
+    "id": 117,
+    "difficulty": "hard",
+    "moves": 22
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 12,
+    "grid": [
+      [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    ],
+    "id": 118,
+    "difficulty": "hard",
+    "moves": 17
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 8,
+    "grid": [
+      [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "id": 119,
+    "difficulty": "hard",
+    "moves": 11
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 8,
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "id": 120,
+    "difficulty": "hard",
+    "moves": 11
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 10,
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ]
+    ],
+    "id": 121,
+    "difficulty": "hard",
+    "moves": 14
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 10,
+    "grid": [
+      [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "id": 122,
+    "difficulty": "hard",
+    "moves": 14
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 8,
+    "grid": [
+      [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "id": 123,
+    "difficulty": "hard",
+    "moves": 11
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 10,
+    "grid": [
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    ],
+    "id": 124,
+    "difficulty": "hard",
+    "moves": 14
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 10,
+    "grid": [
+      [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "id": 125,
+    "difficulty": "hard",
+    "moves": 14
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 8,
+    "grid": [
+      [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    ],
+    "id": 126,
+    "difficulty": "hard",
+    "moves": 11
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 12,
+    "grid": [
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ]
+    ],
+    "id": 127,
+    "difficulty": "hard",
+    "moves": 17
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 10,
+    "grid": [
+      [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "id": 128,
+    "difficulty": "hard",
+    "moves": 14
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 14,
+    "grid": [
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    ],
+    "id": 129,
+    "difficulty": "hard",
+    "moves": 20
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 6,
+    "states": 2,
+    "optimal": 16,
+    "grid": [
+      [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    ],
+    "id": 130,
+    "difficulty": "hard",
+    "moves": 22
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 7,
+    "states": 2,
+    "optimal": 14,
+    "grid": [
+      [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "id": 131,
+    "difficulty": "expert",
+    "moves": 18
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 7,
+    "states": 2,
+    "optimal": 12,
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    ],
+    "id": 132,
+    "difficulty": "expert",
+    "moves": 15
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 7,
+    "states": 2,
+    "optimal": 16,
+    "grid": [
+      [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    ],
+    "id": 133,
+    "difficulty": "expert",
+    "moves": 20
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 7,
+    "states": 2,
+    "optimal": 14,
+    "grid": [
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ]
+    ],
+    "id": 134,
+    "difficulty": "expert",
+    "moves": 18
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 7,
+    "states": 2,
+    "optimal": 18,
+    "grid": [
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ]
+    ],
+    "id": 135,
+    "difficulty": "expert",
+    "moves": 23
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 7,
+    "states": 2,
+    "optimal": 14,
+    "grid": [
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ]
+    ],
+    "id": 136,
+    "difficulty": "expert",
+    "moves": 18
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 7,
+    "states": 2,
+    "optimal": 12,
+    "grid": [
+      [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "id": 137,
+    "difficulty": "expert",
+    "moves": 15
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 7,
+    "states": 2,
+    "optimal": 14,
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "id": 138,
+    "difficulty": "expert",
+    "moves": 18
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 7,
+    "states": 2,
+    "optimal": 20,
+    "grid": [
+      [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ]
+    ],
+    "id": 139,
+    "difficulty": "expert",
+    "moves": 25
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 7,
+    "states": 2,
+    "optimal": 18,
+    "grid": [
+      [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ]
+    ],
+    "id": 140,
+    "difficulty": "expert",
+    "moves": 23
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 7,
+    "states": 2,
+    "optimal": 16,
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    ],
+    "id": 141,
+    "difficulty": "expert",
+    "moves": 20
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 7,
+    "states": 2,
+    "optimal": 18,
+    "grid": [
+      [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ]
+    ],
+    "id": 142,
+    "difficulty": "expert",
+    "moves": 23
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 7,
+    "states": 2,
+    "optimal": 14,
+    "grid": [
+      [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    ],
+    "id": 143,
+    "difficulty": "expert",
+    "moves": 18
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 7,
+    "states": 2,
+    "optimal": 16,
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    ],
+    "id": 144,
+    "difficulty": "expert",
+    "moves": 20
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 7,
+    "states": 2,
+    "optimal": 18,
+    "grid": [
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ]
+    ],
+    "id": 145,
+    "difficulty": "expert",
+    "moves": 23
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 7,
+    "states": 2,
+    "optimal": 16,
+    "grid": [
+      [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ]
+    ],
+    "id": 146,
+    "difficulty": "expert",
+    "moves": 20
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 7,
+    "states": 2,
+    "optimal": 16,
+    "grid": [
+      [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    ],
+    "id": 147,
+    "difficulty": "expert",
+    "moves": 20
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 7,
+    "states": 2,
+    "optimal": 16,
+    "grid": [
+      [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "id": 148,
+    "difficulty": "expert",
+    "moves": 20
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 7,
+    "states": 2,
+    "optimal": 22,
+    "grid": [
+      [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    ],
+    "id": 149,
+    "difficulty": "expert",
+    "moves": 28
+  },
+  {
+    "mechanic": "lights_out",
+    "size": 7,
+    "states": 2,
+    "optimal": 18,
+    "grid": [
+      [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "id": 150,
+    "difficulty": "expert",
+    "moves": 23
+  }
+]

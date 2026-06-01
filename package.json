@@ -1,0 +1,14 @@
+{
+  "name": "shift-puzzle",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Playable web prototype for a Lights Out-style puzzle game (swappable mechanic). Eventual target: Godot 4.x mobile.",
+  "type": "module",
+  "scripts": {
+    "start": "python3 -m http.server 8000 --directory web",
+    "serve": "python3 -m http.server 8000 --directory web",
+    "test": "node tools/test/run-tests.js",
+    "gen-levels": "node tools/gen-levels.js"
+  },
+  "license": "MIT"
+}

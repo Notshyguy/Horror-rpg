@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Local env / secrets (e.g. real AdMob IDs in a future Godot port)
+config/admob_ids.json
+*.keystore
+.env
+.env.local
+
+# Build / export artifacts
+dist/
+build/
+*.apk
+*.aab
+*.ipa

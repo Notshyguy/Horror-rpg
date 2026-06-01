@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#04080e" />
+    <title>Shift — Puzzle Prototype</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <div class="brand">
+          <span class="logo">⬡</span>
+          <span class="title">SHIFT</span>
+          <span class="tag" id="mechanic-name">Lights Out</span>
+        </div>
+        <div class="total-stars" id="total-stars">★ 0</div>
+      </header>
+
+      <section class="hud">
+        <div class="hud-line">
+          <span class="level" id="level-num">Level 1</span>
+          <span class="chip" id="difficulty">tutorial</span>
+          <span class="chip ghost" id="optimal">optimal 0</span>
+        </div>
+        <div class="hud-line">
+          <span class="moves" id="moves">0 / 0</span>
+          <span class="stars" id="stars">☆☆☆</span>
+        </div>
+      </section>
+
+      <div class="board" id="board"></div>
+
+      <p class="status" id="status">Turn every tile off.</p>
+
+      <nav class="controls">
+        <button type="button" id="btn-prev">‹ Prev</button>
+        <button type="button" id="btn-reset">Reset</button>
+        <button type="button" id="btn-hint">Hint</button>
+        <button type="button" id="btn-next">Next ›</button>
+      </nav>
+
+      <footer class="foot">
+        Web prototype · swappable puzzle mechanic · eventual target: Godot 4.x
+      </footer>
+    </main>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
