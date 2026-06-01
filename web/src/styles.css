@@ -254,3 +254,133 @@ body {
   font-size: 11px;
   margin-top: auto;
 }
+
+/* ── Mode switcher ─────────────────────────────────────────────────────────── */
+.modes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.mode-btn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  border-radius: 10px;
+  padding: 10px 6px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  min-height: 44px;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+
+.mode-btn.active {
+  color: var(--text);
+  border-color: var(--accent);
+  background: #0d1a24;
+}
+
+/* ── Jewel shelves ─────────────────────────────────────────────────────────── */
+.board.shelves {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  aspect-ratio: auto;
+  min-height: 320px;
+  padding: 16px 12px;
+  touch-action: none; /* let the drag handler own gestures */
+}
+
+.shelf {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 8px;
+  padding: 4px 6px 0;
+  transition: background 0.12s;
+}
+
+.shelf.drop-target {
+  background: rgba(56, 189, 248, 0.12);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+
+.shelf.hint {
+  animation: shelfHint 0.7s ease;
+}
+
+@keyframes shelfHint {
+  0%,
+  100% {
+    box-shadow: inset 0 0 0 0 rgba(167, 139, 250, 0);
+  }
+  50% {
+    box-shadow: inset 0 0 0 2px rgba(167, 139, 250, 0.9);
+  }
+}
+
+.shelf-slots {
+  display: flex;
+  gap: 6px;
+  align-items: flex-end;
+  min-height: 44px;
+  flex-wrap: nowrap;
+}
+
+.shelf-plank {
+  height: 6px;
+  border-radius: 4px;
+  margin-top: 5px;
+  background: linear-gradient(#26303d, #161e28);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+.jewel {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  font-size: 26px;
+  line-height: 1;
+  color: var(--jewel-color, #fff);
+  text-shadow: 0 0 10px var(--jewel-color, #fff), 0 1px 1px rgba(0, 0, 0, 0.5);
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.4));
+  user-select: none;
+  -webkit-user-select: none;
+  transition: transform 0.1s;
+}
+
+.jewel.draggable {
+  cursor: grab;
+}
+
+.jewel.draggable::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  margin-top: 30px;
+  border-radius: 2px;
+  background: var(--jewel-color);
+  opacity: 0.5;
+}
+
+.jewel.lifted {
+  opacity: 0.25;
+}
+
+.jewel-ghost {
+  position: fixed;
+  z-index: 100;
+  pointer-events: none;
+  margin: 0;
+  transform: scale(1.15);
+}
+
+.board.solved {
+  animation: boardSolved 0.5s ease;
+}

@@ -1,0 +1,129 @@
+[
+  {
+    "mechanic": "jewel_shelves",
+    "id": 1,
+    "difficulty": "tutorial",
+    "colors": 5,
+    "capacity": 6,
+    "jewels": 3,
+    "optimal": 1,
+    "moves": 3,
+    "shelves": [
+      [
+        0,
+        0
+      ],
+      [
+        0
+      ],
+      []
+    ]
+  },
+  {
+    "mechanic": "jewel_shelves",
+    "id": 2,
+    "difficulty": "easy",
+    "colors": 5,
+    "capacity": 6,
+    "jewels": 6,
+    "optimal": 5,
+    "moves": 8,
+    "shelves": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      []
+    ]
+  },
+  {
+    "mechanic": "jewel_shelves",
+    "id": 3,
+    "difficulty": "easy",
+    "colors": 5,
+    "capacity": 7,
+    "jewels": 9,
+    "optimal": 7,
+    "moves": 11,
+    "shelves": [
+      [
+        0,
+        1,
+        2,
+        0
+      ],
+      [
+        2,
+        1,
+        0,
+        2
+      ],
+      [
+        1
+      ],
+      []
+    ]
+  },
+  {
+    "mechanic": "jewel_shelves",
+    "id": 4,
+    "difficulty": "medium",
+    "colors": 5,
+    "capacity": 7,
+    "jewels": 9,
+    "optimal": 6,
+    "moves": 10,
+    "shelves": [
+      [
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        2,
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      []
+    ]
+  },
+  {
+    "mechanic": "jewel_shelves",
+    "id": 5,
+    "difficulty": "medium",
+    "colors": 5,
+    "capacity": 7,
+    "jewels": 9,
+    "optimal": 7,
+    "moves": 11,
+    "shelves": [
+      [
+        2,
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      []
+    ]
+  }
+]

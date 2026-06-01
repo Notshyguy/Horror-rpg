@@ -5,10 +5,12 @@
 
 ## Current Status
 
-Phase: **playable web prototype**. The mechanic is **Lights Out**, implemented
-behind a swappable interface so it can be replaced (or a port to Godot 4.x can
-reuse the same logic shape). There is **no Godot project yet** — see
-`docs/PLAN.md` for the eventual Godot-first build plan this grew out of.
+Phase: **playable web prototype** with **two game modes** the player can switch
+between: **Lights Out** (tap toggle) and **Jewel Match** (drag jewels between
+shelves to clear runs of 3+). Both run on the same swappable `PuzzleMechanic`
+interface, so a third mode is the same shape of work. A port to Godot 4.x can
+reuse the same logic. There is **no Godot project yet** — see `docs/PLAN.md` for
+the eventual Godot-first plan this grew out of.
 
 ## What's Built
 
@@ -19,21 +21,25 @@ web/
   sw.js                   # service worker: offline-first app-shell cache
   icons/                  # icon.svg + generated icon-192.png / icon-512.png
   src/
-    main.js               # wires generator + GameState + renderer + events
+    main.js               # mode switcher + wires GameState + renderer + events
     styles.css            # dark flat theme
     engine/               # PURE, dependency-free, runs in browser AND Node
       PuzzleMechanic.js   # interface every mechanic implements
       LightsOut.js        # Lights Out rule + minimum-move solver (Z_m Gauss)
+      JewelShelves.js     # Jewel Match rule (drag-to-clear) + BFS solver
       mechanics.js        # registry + DEFAULT_MECHANIC_ID (the swap point)
       levelGenerator.js   # scramble-a-solved-board generator + difficulty tiers
       GameState.js        # one live puzzle: moves, win/lose, stars, hints
       SaveManager.js      # localStorage progress (Godot save.json schema shape)
       EventBus.js         # pub/sub: move_made, board_solved, board_failed, ...
     ui/
-      BoardRenderer.js    # renders a grid state, forwards cell taps
-  levels/levels.json      # committed generated set (also generated at runtime)
+      BoardRenderer.js    # renders a grid state, forwards cell taps (Lights Out)
+      ShelfRenderer.js    # renders jewel shelves, pointer drag-and-drop (Jewel)
+  levels/levels.json      # committed Lights Out set (also generated at runtime)
+  levels/jewels.json      # committed 5 hand-authored Jewel Match levels
 tools/
   gen-levels.js           # node tools/gen-levels.js [seed] -> web/levels.json
+  gen-jewel-levels.js     # validate + compute optimal for jewels.json
   gen-icons.js            # node tools/gen-icons.js -> web/icons/*.png (no deps)
   test/run-tests.js       # node tools/test/run-tests.js  (npm test)
 docs/PLAN.md              # the original Godot-first plan (reference)
@@ -61,6 +67,16 @@ applyMove, isSolved, legalMoves, solve, cloneState). To change the game type:
 Nothing in the generator, GameState, save, or UI needs to change. State is always
 plain JSON-serializable data so it can be saved and (later) sent over a network.
 
+Each mechanic owns the shape of its level data via `stateFromLevel(level)`, so
+`GameState` stays agnostic (grids vs shelves vs whatever comes next).
+
+## Game Modes
+
+`main.js` defines a small `MODES` table. Each mode = a mechanic id, its level
+source, a renderer factory, goal text, and a save-key namespace (`lo:` / `jm:`)
+so per-mode progress never collides. The header has a mode switcher. Adding a
+mode = implement a mechanic + a renderer + one `MODES` entry.
+
 ## Mechanic: Lights Out
 
 Pressing a cell advances it and its 4 orthogonal neighbours by one state (mod
@@ -85,6 +101,36 @@ which drives the honest `optimal` count used for star ratings and hints.
 
 Every generated level is solvable by construction (scramble a solved board),
 then validated by re-solving and recording the true optimal.
+
+## Mechanic: Jewel Match (`jewel_shelves`)
+
+Shelves each hold a left-aligned row of jewels (ids 0..colors-1). A move drags
+the **rightmost** jewel of one shelf onto the right end of another (so a shelf
+behaves like a stack). After each move, any run of **3+ identical adjacent**
+jewels pops; survivors slide together, which can **cascade** into more clears.
+Solved = every shelf empty. A bounded BFS finds the minimum-move solution for the
+honest `optimal` (and hints). Jewel ids map to Ruby/Sapphire/Emerald/Amber/
+Amethyst in `ShelfRenderer`.
+
+### Jewel Level Data Format (`web/levels/jewels.json`)
+
+```jsonc
+{
+  "mechanic": "jewel_shelves",
+  "id": 1,                   // 1-based
+  "difficulty": "easy",
+  "colors": 5,               // palette size
+  "capacity": 7,             // max jewels a single shelf can hold
+  "optimal": 5,              // BFS minimum move count
+  "moves": 8,                // player's move limit
+  "shelves": [[0,1,0],[1,0,1],[]]  // each inner array = one shelf, left→right
+}
+```
+
+Levels are **hand-authored** in `tools/gen-jewel-levels.js`, then the tool
+validates each is solvable and computes/writes the true `optimal`. Not every
+layout is solvable under the stack rule — the tool **rejects unsolvable levels
+loudly** (exit non-zero), so always run it after editing layouts.
 
 ## Star Rating (GameState.calculateStars)
 

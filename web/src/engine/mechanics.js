@@ -5,6 +5,7 @@
 // mechanics by id through getMechanic(), so this file is the single swap point.
 
 import { LightsOut } from "./LightsOut.js";
+import { JewelShelves } from "./JewelShelves.js";
 
 const REGISTRY = new Map();
 
@@ -13,6 +14,7 @@ function register(mechanic) {
 }
 
 register(new LightsOut());
+register(new JewelShelves());
 
 // The mechanic the game currently ships with. Change this one line (and the
 // matching default in CLAUDE.md) to retarget the whole prototype.

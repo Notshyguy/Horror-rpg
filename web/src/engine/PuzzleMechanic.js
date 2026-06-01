@@ -38,6 +38,22 @@ export class PuzzleMechanic {
   }
 
   /**
+   * Build the live starting state for a level definition. Each mechanic owns the
+   * shape of its level data (grids, shelves, ...), so GameState stays agnostic.
+   * Override per mechanic. The default assumes a `grid` field.
+   * @param {Object} level
+   * @returns {any} serializable state
+   */
+  stateFromLevel(level) {
+    return {
+      mechanic: this.id,
+      size: level.size,
+      states: level.states ?? 2,
+      grid: this.cloneState({ grid: level.grid }).grid,
+    };
+  }
+
+  /**
    * Apply a move, returning a NEW state. Must not mutate the input.
    * @param {any} state
    * @param {any} move  Mechanic-defined move (e.g. {x, y} for Lights Out).

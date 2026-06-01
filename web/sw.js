@@ -4,7 +4,7 @@
 // network (important when installed to a home screen). Bump CACHE_VERSION to
 // invalidate old caches when files change.
 
-const CACHE_VERSION = "shift-v1";
+const CACHE_VERSION = "shift-v2";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -13,12 +13,15 @@ const APP_SHELL = [
   "./src/main.js",
   "./src/engine/PuzzleMechanic.js",
   "./src/engine/LightsOut.js",
+  "./src/engine/JewelShelves.js",
   "./src/engine/mechanics.js",
   "./src/engine/levelGenerator.js",
   "./src/engine/EventBus.js",
   "./src/engine/GameState.js",
   "./src/engine/SaveManager.js",
   "./src/ui/BoardRenderer.js",
+  "./src/ui/ShelfRenderer.js",
+  "./levels/jewels.json",
   "./icons/icon.svg",
 ];
 

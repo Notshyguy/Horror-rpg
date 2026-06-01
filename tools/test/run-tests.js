@@ -2,9 +2,12 @@
 // Usage: node tools/test/run-tests.js   (or: npm test)
 
 import { LightsOut } from "../../web/src/engine/LightsOut.js";
+import { JewelShelves } from "../../web/src/engine/JewelShelves.js";
 import { GameState, calculateStars } from "../../web/src/engine/GameState.js";
 import { SaveManager } from "../../web/src/engine/SaveManager.js";
 import { generateLevel, generateLevelSet, makeRng } from "../../web/src/engine/levelGenerator.js";
+import { readFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
 
 let passed = 0;
 let failed = 0;
@@ -189,6 +192,93 @@ test("generateLevelSet produces sequential ids and fair move limits", () => {
   for (let i = 0; i < set.length; i++) {
     eq(set[i].id, i + 1, "sequential id");
     assert(set[i].moves > set[i].optimal, "limit must exceed optimal");
+  }
+});
+
+console.log("\nJewelShelves mechanic");
+
+const js = new JewelShelves();
+
+test("three adjacent identical jewels clear on landing", () => {
+  // [0,0] + dragging a 0 onto it makes [0,0,0] -> clears to empty
+  const state = js.stateFromLevel({ colors: 5, capacity: 6, shelves: [[0, 0], [0], []] });
+  const after = js.applyMove(state, { from: 1, to: 0 });
+  eq(after.shelves[0].length, 0, "run of 3 should clear shelf 0");
+  assert(js.isSolved(after), "board should be solved");
+});
+
+test("applyMove moves the rightmost jewel and does not mutate input", () => {
+  const state = js.stateFromLevel({ colors: 5, capacity: 6, shelves: [[1, 2], [3], []] });
+  const before = JSON.stringify(state);
+  const after = js.applyMove(state, { from: 0, to: 2 });
+  eq(JSON.stringify(state), before, "input unchanged");
+  eq(after.shelves[2][0], 2, "rightmost jewel (2) moved to shelf 2");
+  eq(after.shelves[0].length, 1, "source lost one jewel");
+});
+
+test("non-matching move just relocates (no clear)", () => {
+  const state = js.stateFromLevel({ colors: 5, capacity: 6, shelves: [[0, 1], [2], []] });
+  const after = js.applyMove(state, { from: 1, to: 2 });
+  eq(after.shelves[2].length, 1, "jewel relocated");
+  assert(!js.isSolved(after), "not solved");
+});
+
+test("clearing cascades when survivors form a new run", () => {
+  // shelf: [1,1,0] ; drop 0 -> [1,1,0,0] no clear yet; drop another 0 ->
+  // [1,1,0,0,0] clears the three 0s -> [1,1]; then drop 1 -> [1,1,1] clears.
+  let state = js.stateFromLevel({ colors: 5, capacity: 8, shelves: [[1, 1, 0], [0], [0], [1]] });
+  state = js.applyMove(state, { from: 1, to: 0 }); // [1,1,0,0]
+  state = js.applyMove(state, { from: 2, to: 0 }); // [1,1,0,0,0] -> [1,1]
+  eq(state.shelves[0].join(","), "1,1", "zeros cleared, ones remain");
+  state = js.applyMove(state, { from: 3, to: 0 }); // [1,1,1] -> clears
+  eq(state.shelves[0].length, 0, "ones cleared after cascade");
+});
+
+test("solver solves the tutorial layout in one move", () => {
+  const state = js.stateFromLevel({ colors: 5, capacity: 6, shelves: [[0, 0], [0], []] });
+  const sol = js.solve(state);
+  assert(sol, "should find a solution");
+  eq(sol.length, 1, "tutorial is one move");
+});
+
+test("solver result actually solves the board", () => {
+  const state = js.stateFromLevel({ colors: 5, capacity: 7, shelves: [[0, 1, 0], [1, 0, 1], []] });
+  const sol = js.solve(state);
+  assert(sol, "should find a solution");
+  let s = state;
+  for (const mv of sol) s = js.applyMove(s, mv);
+  assert(js.isSolved(s), "applying the solution clears all shelves");
+});
+
+test("GameState drives a JewelShelves win and scores stars", () => {
+  const level = {
+    mechanic: "jewel_shelves",
+    id: 1,
+    colors: 5,
+    capacity: 6,
+    optimal: 1,
+    moves: 3,
+    shelves: [[0, 0], [0], []],
+  };
+  const game = new GameState(level);
+  const res = game.play({ from: 1, to: 0 });
+  assert(res.solved, "should solve");
+  assert(game.won, "won flag");
+  eq(game.movesUsed, 1, "one move used");
+});
+
+console.log("\nJewel level data");
+
+test("all committed jewel levels are solvable with the recorded optimal", () => {
+  const path = fileURLToPath(new URL("../../web/levels/jewels.json", import.meta.url));
+  const levels = JSON.parse(readFileSync(path, "utf8"));
+  eq(levels.length, 5, "exactly 5 jewel levels");
+  for (const lvl of levels) {
+    const state = js.stateFromLevel(lvl);
+    const sol = js.solve(state);
+    assert(sol, `level ${lvl.id} must be solvable`);
+    eq(sol.length, lvl.optimal, `level ${lvl.id} optimal matches solver`);
+    assert(lvl.moves >= lvl.optimal, `level ${lvl.id} limit >= optimal`);
   }
 });
 

@@ -23,12 +23,7 @@ export class GameState {
     this.level = level;
     this.bus = bus;
     this.mechanic = getMechanic(level.mechanic);
-    this.state = {
-      mechanic: level.mechanic,
-      size: level.size,
-      states: level.states ?? 2,
-      grid: this.mechanic.cloneState({ grid: level.grid }).grid,
-    };
+    this.state = this.mechanic.stateFromLevel(level);
     this.movesUsed = 0;
     this.limit = level.moves;
     this.finished = false;
