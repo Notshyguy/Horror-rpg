@@ -15,6 +15,9 @@ reuse the same logic shape). There is **no Godot project yet** — see
 ```
 web/
   index.html              # prototype shell (mobile-sized, portrait)
+  manifest.webmanifest    # PWA manifest (installable / add to home screen)
+  sw.js                   # service worker: offline-first app-shell cache
+  icons/                  # icon.svg + generated icon-192.png / icon-512.png
   src/
     main.js               # wires generator + GameState + renderer + events
     styles.css            # dark flat theme
@@ -31,8 +34,10 @@ web/
   levels/levels.json      # committed generated set (also generated at runtime)
 tools/
   gen-levels.js           # node tools/gen-levels.js [seed] -> web/levels.json
+  gen-icons.js            # node tools/gen-icons.js -> web/icons/*.png (no deps)
   test/run-tests.js       # node tools/test/run-tests.js  (npm test)
 docs/PLAN.md              # the original Godot-first plan (reference)
+.github/workflows/        # deploy-pages.yml: publishes web/ to GitHub Pages
 .claude/                  # commands + settings for Claude Code
 ```
 

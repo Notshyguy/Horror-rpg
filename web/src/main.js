@@ -97,3 +97,14 @@ els.hint.addEventListener("click", () => {
 
 els.totalStars.textContent = `★ ${save.totalStars()}`;
 loadLevel(0);
+
+// Register the service worker for offline / installable PWA support. Resolved
+// relative to this module so it works under a GitHub Pages subpath. Ignored on
+// file:// (no service worker support there) — the game still runs fine.
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register(new URL("../sw.js", import.meta.url)).catch(() => {
+      /* offline support is a progressive enhancement; ignore failures */
+    });
+  });
+}

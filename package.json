@@ -8,7 +8,8 @@
     "start": "python3 -m http.server 8000 --directory web",
     "serve": "python3 -m http.server 8000 --directory web",
     "test": "node tools/test/run-tests.js",
-    "gen-levels": "node tools/gen-levels.js"
+    "gen-levels": "node tools/gen-levels.js",
+    "gen-icons": "node tools/gen-icons.js"
   },
   "license": "MIT"
 }
