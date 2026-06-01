@@ -3,6 +3,7 @@
 
 import { LightsOut } from "../../web/src/engine/LightsOut.js";
 import { JewelShelves } from "../../web/src/engine/JewelShelves.js";
+import { DogMatch, TREAT } from "../../web/src/engine/DogMatch.js";
 import { GameState, calculateStars } from "../../web/src/engine/GameState.js";
 import { SaveManager } from "../../web/src/engine/SaveManager.js";
 import { generateLevel, generateLevelSet, makeRng } from "../../web/src/engine/levelGenerator.js";
@@ -279,6 +280,146 @@ test("all committed jewel levels are solvable with the recorded optimal", () => 
     assert(sol, `level ${lvl.id} must be solvable`);
     eq(sol.length, lvl.optimal, `level ${lvl.id} optimal matches solver`);
     assert(lvl.moves >= lvl.optimal, `level ${lvl.id} limit >= optimal`);
+  }
+});
+
+console.log("\nDogMatch mechanic");
+
+const dm = new DogMatch();
+
+// Helper: build a raw state with an explicit grid (bypassing seeded init) so we
+// can test rules deterministically. breeds/rows/cols inferred from the grid.
+function dogState(grid, { target = 999, treatChance = 0 } = {}) {
+  const rows = grid.length;
+  const cols = grid[0].length;
+  let breeds = 0;
+  for (const row of grid) for (const v of row) if (v !== TREAT && v + 1 > breeds) breeds = v + 1;
+  return {
+    mechanic: "dog_match",
+    rows,
+    cols,
+    breeds: Math.max(breeds, 3),
+    treatChance,
+    target,
+    cleared: 0,
+    seed: 12345,
+    grid: grid.map((r) => [...r]),
+  };
+}
+
+test("a swap that creates a 3-in-a-row is legal and clears dogs", () => {
+  // Top row is [1,1,0]; swapping (x=2,y=0)=0 with (x=2,y=1)=1 makes the top row
+  // 1,1,1 -> a horizontal match.
+  const board = dogState([
+    [1, 1, 0],
+    [2, 0, 1],
+    [0, 2, 2],
+  ]);
+  const after = dm.applyMove(board, { from: { x: 2, y: 0 }, to: { x: 2, y: 1 } });
+  assert(after !== board, "swap should be legal (creates a match)");
+  assert(after.cleared >= 3, "should clear at least the 3 matched dogs");
+});
+
+test("a swap that creates no match is rejected (same state reference)", () => {
+  const board = dogState([
+    [0, 1, 2],
+    [1, 2, 0],
+    [2, 0, 1],
+  ]);
+  const after = dm.applyMove(board, { from: { x: 0, y: 0 }, to: { x: 1, y: 0 } });
+  eq(after, board, "illegal swap returns the same state reference");
+});
+
+test("a treat is wild: completes a match from the middle", () => {
+  // Row0: breed1, TREAT, breed1 — the treat fills the middle to make 1,T,1.
+  const matches = dm._findMatches(
+    [
+      [1, TREAT, 1],
+      [0, 2, 0],
+      [2, 0, 2],
+    ],
+    3,
+    3
+  );
+  assert(matches.size >= 3, "treat in the middle should complete a 3-run");
+});
+
+test("pure treats with no real dog do NOT match", () => {
+  // Treat row is isolated: no column places two same-breed dogs under a treat.
+  const matches = dm._findMatches(
+    [
+      [TREAT, TREAT, TREAT],
+      [0, 1, 2],
+      [1, 2, 0],
+    ],
+    3,
+    3
+  );
+  eq(matches.size, 0, "a run of only treats is not a match");
+});
+
+test("a matched treat detonates its 8 neighbours (bomb)", () => {
+  // Make a horizontal 1,T,1 match on the top row; the treat at (1,0) should also
+  // clear neighbours at row 1 (0,1),(1,1),(2,1).
+  const next = dogState([
+    [1, TREAT, 1],
+    [3, 3, 3], // distinct breed so we can see them get bombed (also a match itself)
+    [0, 2, 0],
+  ]);
+  // Trigger resolution via a no-op-safe path: call _resolve directly.
+  const before = JSON.stringify(next.grid);
+  const cleared = dm._resolve(next);
+  assert(cleared > 0, "some dogs cleared");
+  assert(JSON.stringify(next.grid) !== before, "grid changed after resolve");
+  // After resolution the board is refilled and stable (no immediate matches).
+  eq(dm._findMatches(next.grid, next.rows, next.cols).size, 0, "board stable after resolve");
+});
+
+test("stateFromLevel builds a stable, playable board from a seed", () => {
+  const level = { rows: 7, cols: 7, breeds: 5, treatChance: 0.05, target: 30, seed: 42 };
+  const state = dm.stateFromLevel(level);
+  eq(state.rows, 7, "rows");
+  eq(dm._findMatches(state.grid, 7, 7).size, 0, "no pre-made matches on a fresh board");
+  assert(dm.legalMoves(state).length > 0, "fresh board has at least one legal move");
+});
+
+test("seeded board is deterministic (same seed -> same grid)", () => {
+  const level = { rows: 6, cols: 6, breeds: 4, treatChance: 0.05, target: 20, seed: 777 };
+  const a = dm.stateFromLevel(level);
+  const b = dm.stateFromLevel(level);
+  eq(JSON.stringify(a.grid), JSON.stringify(b.grid), "identical seeds produce identical boards");
+});
+
+test("isSolved triggers when cleared reaches target; stars by efficiency", () => {
+  const state = dogState([[0, 1, 2], [1, 2, 0], [2, 0, 1]], { target: 5 });
+  state.cleared = 5;
+  assert(dm.isSolved(state), "solved when cleared >= target");
+  eq(dm.starsForWin(5, { moves: 10 }), 3, "fast win (<=60%) => 3 stars");
+  eq(dm.starsForWin(8, { moves: 10 }), 2, "mid win (<=85%) => 2 stars");
+  eq(dm.starsForWin(10, { moves: 10 }), 1, "last-moment win => 1 star");
+});
+
+console.log("\nDog level data");
+
+test("all committed dog levels are winnable by the greedy player", () => {
+  const path = fileURLToPath(new URL("../../web/levels/dogs.json", import.meta.url));
+  const levels = JSON.parse(readFileSync(path, "utf8"));
+  eq(levels.length, 10, "exactly 10 dog levels");
+  for (const lvl of levels) {
+    let state = dm.stateFromLevel(lvl);
+    let stalls = 0;
+    for (let m = 0; m < lvl.moves && !dm.isSolved(state); m++) {
+      const best = dm._bestMove(state);
+      if (!best) break;
+      const after = dm.applyMove(state, best);
+      if (after === state) {
+        if (++stalls > 2) break;
+        continue;
+      }
+      state = after;
+      stalls = 0;
+    }
+    assert(dm.isSolved(state), `level ${lvl.id} must be winnable (got ${state.cleared}/${lvl.target})`);
   }
 });
 

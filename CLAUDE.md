@@ -5,12 +5,13 @@
 
 ## Current Status
 
-Phase: **playable web prototype** with **two game modes** the player can switch
-between: **Lights Out** (tap toggle) and **Jewel Match** (drag jewels between
-shelves to clear runs of 3+). Both run on the same swappable `PuzzleMechanic`
-interface, so a third mode is the same shape of work. A port to Godot 4.x can
-reuse the same logic. There is **no Godot project yet** — see `docs/PLAN.md` for
-the eventual Godot-first plan this grew out of.
+Phase: **playable web prototype** with **three game modes** the player can switch
+between: **Lights Out** (tap toggle), **Jewel Match** (drag jewels between shelves
+to clear runs of 3+), and **Dog Match** (a full grid match-3 — drag-swap dogs,
+matches clear and refill from the top, with wild/bomb treats). All run on the same
+swappable `PuzzleMechanic` interface, so a fourth mode is the same shape of work.
+A port to Godot 4.x can reuse the same logic. There is **no Godot project yet** —
+see `docs/PLAN.md` for the eventual Godot-first plan this grew out of.
 
 ## What's Built
 
@@ -27,6 +28,8 @@ web/
       PuzzleMechanic.js   # interface every mechanic implements
       LightsOut.js        # Lights Out rule + minimum-move solver (Z_m Gauss)
       JewelShelves.js     # Jewel Match rule (drag-to-clear) + BFS solver
+      DogMatch.js         # Dog Match grid match-3: swap, clear, gravity+refill,
+                          #   wild/bomb treats, seeded RNG; greedy hint
       mechanics.js        # registry + DEFAULT_MECHANIC_ID (the swap point)
       levelGenerator.js   # scramble-a-solved-board generator + difficulty tiers
       GameState.js        # one live puzzle: moves, win/lose, stars, hints
@@ -35,11 +38,14 @@ web/
     ui/
       BoardRenderer.js    # renders a grid state, forwards cell taps (Lights Out)
       ShelfRenderer.js    # renders jewel shelves, pointer drag-and-drop (Jewel)
+      GridRenderer.js     # renders dog grid, drag-to-swap pointer input (Dog)
   levels/levels.json      # committed Lights Out set (also generated at runtime)
   levels/jewels.json      # committed 5 hand-authored Jewel Match levels
+  levels/dogs.json        # committed 10 validated Dog Match levels
 tools/
   gen-levels.js           # node tools/gen-levels.js [seed] -> web/levels.json
   gen-jewel-levels.js     # validate + compute optimal for jewels.json
+  gen-dog-levels.js       # validate Dog Match levels (greedy-winnable) -> dogs.json
   gen-icons.js            # node tools/gen-icons.js -> web/icons/*.png (no deps)
   test/run-tests.js       # node tools/test/run-tests.js  (npm test)
 docs/PLAN.md              # the original Godot-first plan (reference)
@@ -132,11 +138,61 @@ validates each is solvable and computes/writes the true `optimal`. Not every
 layout is solvable under the stack rule — the tool **rejects unsolvable levels
 loudly** (exit non-zero), so always run it after editing layouts.
 
+## Mechanic: Dog Match (`dog_match`)
+
+A full grid match-3. A move drags a dog to **swap with an orthogonally adjacent
+cell**; the swap is only legal if it forms a match (otherwise `applyMove` returns
+the *same state reference* and `GameState` spends no move). On a valid swap, runs
+of **3+ identical** dogs (rows/columns) clear, survivors fall, and **new dogs fill
+in from the top**, cascading until stable.
+
+**Treats** (`TREAT` sentinel id `9`, so breeds must be `< 9`) are:
+- **wild** — a treat substitutes for any breed to complete a line, and can sit in
+  the **middle** or ends (a run needs ≥1 real dog of the breed; pure-treat runs
+  don't match), and
+- **bombs** — when a treat is part of a cleared match, all **8 neighbours** clear
+  too ("nearby dogs leave").
+
+**Win**: send `target` dogs home (cumulative cleared ≥ target) within the move
+limit. Stars are efficiency-based via `DogMatch.starsForWin` (≤60% of moves → 3,
+≤85% → 2, else 1) — there's no fixed "optimal" for a refilling board, so
+`GameState._stars()` defers to the mechanic when it provides `starsForWin`.
+
+**Determinism**: refills use a seeded RNG threaded through `state.seed`, so a
+level plays out identically for identical moves — which makes it testable and
+lets the level tool prove winnability. Breeds render as dog emoji in
+`GridRenderer` (Shiba/Poodle/Husky/Dalmatian/Hound/Boxer); treats are 🦴.
+
+### Dog Level Data Format (`web/levels/dogs.json`)
+
+```jsonc
+{
+  "mechanic": "dog_match",
+  "id": 1,
+  "difficulty": "easy",
+  "rows": 7, "cols": 7,      // grid size
+  "breeds": 5,               // distinct dog breeds (< 9)
+  "treatChance": 0.06,       // chance a refilled/initial cell is a treat
+  "target": 34,              // dogs to send home to win
+  "moves": 10,               // player's swap limit
+  "seed": 303                // RNG seed (deterministic board + refills)
+}
+```
+
+`tools/gen-dog-levels.js` defines the level specs and **proves each is winnable**
+by simulating a greedy best-move player; it **rejects unwinnable levels loudly**
+(exit non-zero). Greedy is an upper bound (perfect cascades) and clears far more
+than the target, so real players have headroom — tune `target`/`moves` to taste.
+
 ## Star Rating (GameState.calculateStars)
+
+Default (Lights Out, Jewel Match — uses each level's `optimal`):
 
 - 3 stars: `movesUsed <= optimal + 1`
 - 2 stars: `movesUsed <= floor(limit * 0.75)`
 - 1 star: completed at all
+
+Dog Match overrides this via `DogMatch.starsForWin` (efficiency vs move limit).
 
 ## Save Schema (localStorage key `shift.save.v1`)
 

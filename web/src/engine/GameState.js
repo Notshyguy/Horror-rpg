@@ -41,7 +41,13 @@ export class GameState {
   play(move) {
     if (this.finished) return { changed: false, solved: false, failed: false };
 
-    this.state = this.mechanic.applyMove(this.state, move);
+    const nextState = this.mechanic.applyMove(this.state, move);
+    // A mechanic may signal "this move was illegal / did nothing" by returning
+    // the same state reference. Such a move costs nothing and changes nothing.
+    if (nextState === this.state) {
+      return { changed: false, solved: false, failed: false };
+    }
+    this.state = nextState;
     this.movesUsed++;
 
     const solved = this.mechanic.isSolved(this.state);
@@ -54,7 +60,7 @@ export class GameState {
     if (solved) {
       this.finished = true;
       this.won = true;
-      const stars = calculateStars(this.movesUsed, this.level.optimal, this.limit);
+      const stars = this._stars();
       this.bus?.emit("board_solved", { movesUsed: this.movesUsed, optimal: this.level.optimal, stars });
       return { changed: true, solved: true, failed: false };
     }
@@ -67,6 +73,15 @@ export class GameState {
     }
 
     return { changed: true, solved: false, failed: false };
+  }
+
+  // Star rating: a mechanic with a refilling board (no fixed optimal) can supply
+  // starsForWin(movesUsed, level); otherwise fall back to the optimal-based rule.
+  _stars() {
+    if (typeof this.mechanic.starsForWin === "function") {
+      return this.mechanic.starsForWin(this.movesUsed, this.level);
+    }
+    return calculateStars(this.movesUsed, this.level.optimal, this.limit);
   }
 
   /** Grant extra moves (e.g. a rewarded-ad hook later). */

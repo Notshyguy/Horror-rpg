@@ -258,7 +258,7 @@ body {
 /* ── Mode switcher ─────────────────────────────────────────────────────────── */
 .modes {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 8px;
 }
 
@@ -383,4 +383,50 @@ body {
 
 .board.solved {
   animation: boardSolved 0.5s ease;
+}
+
+/* ── Dog Match grid ────────────────────────────────────────────────────────── */
+.board.dog-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-cols, 7), 1fr);
+  grid-auto-rows: 1fr;
+  gap: 4px;
+  aspect-ratio: var(--grid-cols, 7) / var(--grid-rows, 7);
+  padding: 8px;
+  touch-action: none; /* the drag handler owns gestures */
+}
+
+.dog-cell {
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: color-mix(in srgb, var(--tint, #888) 18%, var(--off));
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  font-size: clamp(16px, 6.5vw, 30px);
+  line-height: 1;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: grab;
+  transition: transform 0.09s ease, box-shadow 0.12s ease, background 0.12s ease;
+  aspect-ratio: 1 / 1;
+  min-width: 0;
+}
+
+.dog-cell.treat {
+  background: color-mix(in srgb, var(--tint, #f4e1b0) 30%, var(--off));
+  box-shadow: inset 0 0 0 1px rgba(244, 225, 176, 0.6), 0 0 10px rgba(244, 225, 176, 0.3);
+}
+
+.dog-cell.picked {
+  transform: scale(1.12);
+  box-shadow: inset 0 0 0 2px var(--accent), 0 0 12px rgba(56, 189, 248, 0.5);
+  z-index: 2;
+}
+
+.dog-cell.swap-target {
+  box-shadow: inset 0 0 0 2px var(--accent-2);
+}
+
+.dog-cell.hint {
+  animation: hintPulse 0.7s ease;
 }

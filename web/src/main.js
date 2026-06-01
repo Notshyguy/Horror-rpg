@@ -8,6 +8,7 @@ import { SaveManager } from "./engine/SaveManager.js";
 import { bus } from "./engine/EventBus.js";
 import { BoardRenderer } from "./ui/BoardRenderer.js";
 import { ShelfRenderer } from "./ui/ShelfRenderer.js";
+import { GridRenderer } from "./ui/GridRenderer.js";
 import { getMechanic } from "./engine/mechanics.js";
 
 const els = {
@@ -39,15 +40,15 @@ function makeBoardRenderer(onInput) {
 }
 
 function makeShelfRenderer(onInput) {
-  const r = new ShelfRenderer(els.board, onInput);
-  return {
-    build: (state) => r.build(state),
-    render: (state) => r.render(state),
-    flashHint: (move) => r.flashHint(move),
-    pulseSolved: () => r.pulseSolved(),
-  };
+  return new ShelfRenderer(els.board, onInput);
 }
 
+function makeGridRenderer(onInput) {
+  return new GridRenderer(els.board, onInput);
+}
+
+// `info(level, game)` returns the right-hand HUD chip text; `progress(game)`
+// returns optional mid-play progress (e.g. dogs sent home). Both optional.
 const MODES = {
   lights_out: {
     label: "Lights Out",
@@ -56,6 +57,7 @@ const MODES = {
     goal: "Turn every tile off.",
     makeRenderer: makeBoardRenderer,
     buildRenderer: (renderer, state) => renderer.build(state.size),
+    info: (level) => `optimal ${level.optimal}`,
   },
   jewel_shelves: {
     label: "Jewel Match",
@@ -64,12 +66,24 @@ const MODES = {
     goal: "Drag jewels to match 3+ and clear every shelf.",
     makeRenderer: makeShelfRenderer,
     buildRenderer: (renderer, state) => renderer.build(state),
+    info: (level) => `optimal ${level.optimal}`,
+  },
+  dog_match: {
+    label: "Dog Match",
+    saveKey: (id) => `dm:${id}`,
+    levels: () => DOG_LEVELS,
+    goal: "Drag dogs to match 3+. Treats 🦴 are wild and blast neighbors!",
+    makeRenderer: makeGridRenderer,
+    buildRenderer: (renderer, state) => renderer.build(state),
+    info: (level) => `send ${level.target} home`,
+    progress: (game) => `${game.state.cleared} / ${game.level.target} dogs`,
   },
 };
 
-// Jewel levels are loaded from the committed JSON (with a tiny inline fallback
-// so the mode still works if the fetch fails, e.g. on file://).
+// Match levels are loaded from committed JSON (with tiny inline fallbacks so the
+// modes still work if the fetch fails, e.g. on file://).
 let JEWEL_LEVELS = [];
+let DOG_LEVELS = [];
 
 // ── Live session state ───────────────────────────────────────────────────────
 let modeId = "lights_out";
@@ -95,6 +109,9 @@ function setMode(id) {
   modeId = id;
   mode = MODES[id];
   levels = mode.levels();
+  // Reset board element styling left over from a previous mode's renderer.
+  els.board.className = "board";
+  els.board.removeAttribute("style");
   renderer = mode.makeRenderer(onInput);
   els.mechanic.textContent = mode.label;
   els.modeButtons.forEach((b) => b.classList.toggle("active", b.dataset.mode === id));
@@ -118,11 +135,11 @@ function loadLevel(index) {
 
   els.level.textContent = `Level ${level.id}`;
   els.difficulty.textContent = level.difficulty;
-  els.optimal.textContent = `optimal ${level.optimal}`;
+  els.optimal.textContent = mode.info ? mode.info(level, game) : "";
   els.moves.textContent = `${game.movesLeft} / ${level.moves}`;
   els.moves.classList.remove("low");
   els.stars.textContent = starString(save.getStars(saveId));
-  els.status.textContent = mode.goal;
+  els.status.textContent = mode.progress ? `${mode.progress(game)} — ${mode.goal}` : mode.goal;
   els.status.className = "status";
   els.board.classList.remove("locked");
   els.prev.disabled = currentIndex === 0;
@@ -134,6 +151,10 @@ bus.on("move_made", ({ movesLeft }) => {
   const level = levels[currentIndex];
   els.moves.textContent = `${movesLeft} / ${level.moves}`;
   els.moves.classList.toggle("low", movesLeft <= 3);
+  // Live progress for modes that track it (e.g. dogs sent home).
+  if (mode.progress && game && !game.finished) {
+    els.status.textContent = `${mode.progress(game)} — ${mode.goal}`;
+  }
 });
 
 bus.on("board_solved", ({ movesUsed, stars }) => {
@@ -164,26 +185,28 @@ els.hint.addEventListener("click", () => {
 els.modeButtons.forEach((b) => b.addEventListener("click", () => setMode(b.dataset.mode)));
 
 // ── Boot ─────────────────────────────────────────────────────────────────────
-async function boot() {
+async function loadJson(relUrl) {
   try {
-    const res = await fetch(new URL("../levels/jewels.json", import.meta.url));
-    if (res.ok) JEWEL_LEVELS = await res.json();
+    const res = await fetch(new URL(relUrl, import.meta.url));
+    if (res.ok) return await res.json();
   } catch {
-    /* fall back below */
+    /* ignore — caller supplies a fallback */
   }
+  return null;
+}
+
+async function boot() {
+  JEWEL_LEVELS = (await loadJson("../levels/jewels.json")) ?? [];
+  DOG_LEVELS = (await loadJson("../levels/dogs.json")) ?? [];
+
   if (!JEWEL_LEVELS.length) {
-    // Minimal inline fallback (level 1) so the mode is never empty.
     JEWEL_LEVELS = [
-      {
-        mechanic: "jewel_shelves",
-        id: 1,
-        difficulty: "tutorial",
-        colors: 5,
-        capacity: 6,
-        optimal: 1,
-        moves: 3,
-        shelves: [[0, 0], [0], []],
-      },
+      { mechanic: "jewel_shelves", id: 1, difficulty: "tutorial", colors: 5, capacity: 6, optimal: 1, moves: 3, shelves: [[0, 0], [0], []] },
+    ];
+  }
+  if (!DOG_LEVELS.length) {
+    DOG_LEVELS = [
+      { mechanic: "dog_match", id: 1, difficulty: "tutorial", rows: 6, cols: 6, breeds: 4, treatChance: 0.05, target: 18, moves: 8, seed: 101 },
     ];
   }
   setMode("lights_out");

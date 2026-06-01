@@ -1,0 +1,122 @@
+[
+  {
+    "mechanic": "dog_match",
+    "id": 1,
+    "difficulty": "tutorial",
+    "rows": 6,
+    "cols": 6,
+    "breeds": 4,
+    "treatChance": 0.05,
+    "target": 18,
+    "moves": 8,
+    "seed": 101
+  },
+  {
+    "mechanic": "dog_match",
+    "id": 2,
+    "difficulty": "easy",
+    "rows": 6,
+    "cols": 6,
+    "breeds": 4,
+    "treatChance": 0.05,
+    "target": 26,
+    "moves": 9,
+    "seed": 202
+  },
+  {
+    "mechanic": "dog_match",
+    "id": 3,
+    "difficulty": "easy",
+    "rows": 7,
+    "cols": 7,
+    "breeds": 4,
+    "treatChance": 0.06,
+    "target": 34,
+    "moves": 10,
+    "seed": 303
+  },
+  {
+    "mechanic": "dog_match",
+    "id": 4,
+    "difficulty": "easy",
+    "rows": 7,
+    "cols": 7,
+    "breeds": 5,
+    "treatChance": 0.06,
+    "target": 42,
+    "moves": 11,
+    "seed": 404
+  },
+  {
+    "mechanic": "dog_match",
+    "id": 5,
+    "difficulty": "medium",
+    "rows": 7,
+    "cols": 7,
+    "breeds": 5,
+    "treatChance": 0.06,
+    "target": 52,
+    "moves": 12,
+    "seed": 505
+  },
+  {
+    "mechanic": "dog_match",
+    "id": 6,
+    "difficulty": "medium",
+    "rows": 8,
+    "cols": 7,
+    "breeds": 5,
+    "treatChance": 0.07,
+    "target": 62,
+    "moves": 13,
+    "seed": 606
+  },
+  {
+    "mechanic": "dog_match",
+    "id": 7,
+    "difficulty": "medium",
+    "rows": 8,
+    "cols": 8,
+    "breeds": 5,
+    "treatChance": 0.07,
+    "target": 74,
+    "moves": 14,
+    "seed": 707
+  },
+  {
+    "mechanic": "dog_match",
+    "id": 8,
+    "difficulty": "hard",
+    "rows": 8,
+    "cols": 8,
+    "breeds": 6,
+    "treatChance": 0.07,
+    "target": 86,
+    "moves": 15,
+    "seed": 808
+  },
+  {
+    "mechanic": "dog_match",
+    "id": 9,
+    "difficulty": "hard",
+    "rows": 9,
+    "cols": 8,
+    "breeds": 6,
+    "treatChance": 0.08,
+    "target": 100,
+    "moves": 16,
+    "seed": 909
+  },
+  {
+    "mechanic": "dog_match",
+    "id": 10,
+    "difficulty": "expert",
+    "rows": 9,
+    "cols": 8,
+    "breeds": 6,
+    "treatChance": 0.08,
+    "target": 120,
+    "moves": 18,
+    "seed": 1010
+  }
+]
